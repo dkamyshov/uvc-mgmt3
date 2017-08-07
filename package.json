@@ -1,0 +1,27 @@
+{
+  "name": "uvc-management",
+  "version": "0.3.0",
+  "description": "UVC management database",
+  "main": "index",
+  "scripts": {
+    "build": "webpack && node ./scripts/copy.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^15.0.24",
+    "@types/react-dom": "^15.5.0",
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "fs-extended": "^0.2.1",
+    "node-sass": "^4.5.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "sass-loader": "^6.0.3",
+    "source-map-loader": "^0.2.1",
+    "style-loader": "^0.17.0",
+    "uglifyjs-webpack-plugin": "^0.4.3",
+    "webpack": "^2.5.0"
+  },
+  "stylePath": "./style.css"
+}

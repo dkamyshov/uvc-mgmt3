@@ -1,0 +1,168 @@
+$sidebarWidth: 300px;
+
+#root {
+    padding: 0;
+    margin: 0;
+    font-size: 12pt;
+    font-family: Tahoma;
+    box-sizing: border-box;
+
+    .uvc__app {
+        width: 100%;
+    }
+
+    .uvc__sidebar {
+        z-index: 9999;
+        position: fixed;
+        overflow-y: scroll;
+        height: 100%;
+        background-color: white;
+        width: $sidebarWidth;
+
+        .uvc__sidebar__link {
+            width: 100%;
+            cursor: pointer;
+
+            .link__label {
+                padding: 8px;
+
+                &:hover {
+                    background-color: gray;
+                }
+
+                &:active {
+                    background-color: darken(gray, 20%);
+                }
+
+                &.active {
+                    color: white;
+                    background-color: lime;
+                }
+            }
+
+            &.inactive {
+                cursor: none;
+                &:hover {background-color: inherit;}
+                &:active {background-color: inherit;}
+            }
+        }
+    }
+
+    .uvc__content {
+        margin-left: $sidebarWidth;
+        width: auto;
+        position: relative;
+
+        padding: 8px;
+    }
+
+    .uvc__station_record {
+        width: 240px;
+        float: none;
+        display: inline-block;
+
+        .uvc__station_record__header {
+            font-size: 14pt;
+            text-align: center;
+            font-weight: bold;
+
+            &.last {
+                color: lightgray;
+            }
+        }
+
+        &:nth-child(n+2) {
+            margin-left: 16px;
+        }
+    }
+
+    .uvc__station_records {
+        white-space: nowrap;
+        overflow-x: scroll;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td, tr {
+            &.winter { background-color: #7CEDFF; }
+            &.spring { background-color: #B7FF7C; }
+            &.summer { background-color: #7CFF7C; }
+            &.fall { background-color: #FFD17C; }
+        }
+
+        &.stats_table {
+            font-weight: normal;
+
+            tr td, th {
+                padding: 4px;
+                border: 1px solid black;
+            }
+
+            tr td:nth-child(n+2) {
+                text-align: right;
+            }
+        }
+
+        &.monthly_table {
+            th {
+                text-align: center;
+            }
+
+            tr.total_row td {
+                border-top: 1px solid black;
+            }
+        }
+
+        &.plan_table {
+            width: auto;
+        }
+
+        &.deviation_table {
+            width: auto;
+        }
+
+        .off-plan {
+            background-color: red;
+            color: white;
+        }
+
+        &.quarters_table {
+            td, th {
+                padding: 2px;
+                text-align: center;
+
+                &.off-plan {
+                    background-color: red;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    input.month-input {
+        width: 80px;
+        padding: 2px;
+        margin: 0;
+    }
+
+    .input_padder {
+        padding: 2px;
+    }
+
+    .content_header {
+        padding: 4px;
+        font-size: 16pt;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
+    }
+
+    .pull-center {
+        text-align: center;
+    }
+
+    .inline {
+        display: inline-block;
+    }
+}

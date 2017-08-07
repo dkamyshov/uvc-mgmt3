@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "target": "es3",
+        "jsx": "react"
+    }
+}
